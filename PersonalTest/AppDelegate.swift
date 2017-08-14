@@ -22,23 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UserDefaults.standard.set(true, forKey:"everLaunched")
             self.loadFirstViewController()
         } else {
-
-            self.sinaCertified()
+            self.jumpToMainViewController()
         }
         return true
-    }
-
-    func sinaCertified() {
-        if (!(UserDefaults.standard.bool(forKey: "certified"))) {
-            let mainStoryboard = UIStoryboard(name:"Main", bundle:nil)
-            guard let VC = mainStoryboard.instantiateViewController(withIdentifier: "certifiedWebViewController") as? WebViewController else {
-                return
-            }
-            self.window?.rootViewController = VC
-            window?.makeKeyAndVisible()
-        }else {
-            jumpToMainViewController()
-        }
     }
 
     func loadFirstViewController() {
@@ -49,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        firstPage.view.addSubview(imageVIew)
         let secondPage = OnboardingContentViewController(title: nil, body: "I am a panda.", image: nil, buttonText: nil) { () -> Void in}
         let thirdPage = OnboardingContentViewController(title: "Ready?", body: nil, image: nil, buttonText: "Now,Fuck yourself") { () -> Void in
-            self.sinaCertified()
+            self.jumpToMainViewController()
         }
         let onboardingVC = OnboardingViewController(backgroundImage: UIImage(named: "milky_way"), contents: [firstPage,secondPage,thirdPage])
         onboardingVC?.shouldMaskBackground = false
@@ -59,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func jumpToMainViewController() {
         let mainStoryboard = UIStoryboard(name:"Main", bundle:nil)
-        guard let nav = mainStoryboard.instantiateViewController(withIdentifier: "Nav") as? UINavigationController else {
+        guard let nav = mainStoryboard.instantiateViewController(withIdentifier: "Nav") as? TtNavigationController else {
             return
         }
         self.window?.rootViewController = nav

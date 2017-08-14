@@ -16,6 +16,7 @@
 		235A53AA1F302BB10038DBF0 /* PersonalTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 235A53A81F302BB10038DBF0 /* PersonalTest.xcdatamodeld */; };
 		235A53AC1F302BB10038DBF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 235A53AB1F302BB10038DBF0 /* Assets.xcassets */; };
 		235A53AF1F302BB10038DBF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 235A53AD1F302BB10038DBF0 /* LaunchScreen.storyboard */; };
+		2363BED31F4146A600CA2F51 /* TtNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2363BED21F4146A500CA2F51 /* TtNavigationController.swift */; };
 		2380DFBD1F3964E400EAF378 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2380DFBB1F3964E400EAF378 /* MyTableViewCell.swift */; };
 		2380DFBE1F3964E400EAF378 /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2380DFBC1F3964E400EAF378 /* MyTableViewCell.xib */; };
 		2380DFC01F39AD9600EAF378 /* NewMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2380DFBF1F39AD9600EAF378 /* NewMainController.swift */; };
@@ -63,6 +64,7 @@
 		235A53AB1F302BB10038DBF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		235A53AE1F302BB10038DBF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		235A53B01F302BB10038DBF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2363BED21F4146A500CA2F51 /* TtNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TtNavigationController.swift; sourceTree = "<group>"; };
 		2380DFBB1F3964E400EAF378 /* MyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		2380DFBC1F3964E400EAF378 /* MyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
 		2380DFBF1F39AD9600EAF378 /* NewMainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMainController.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				2380DFBF1F39AD9600EAF378 /* NewMainController.swift */,
 				23D41C731F3AB6D400C54A40 /* WebViewController.swift */,
 				23D41C751F3AD9F500C54A40 /* UserModel.swift */,
+				2363BED21F4146A500CA2F51 /* TtNavigationController.swift */,
 				235A53A51F302BB10038DBF0 /* Main.storyboard */,
 				235A53AB1F302BB10038DBF0 /* Assets.xcassets */,
 				2341D1CA1F31D17000EC12B8 /* video1.mp4 */,
@@ -318,6 +321,7 @@
 				23BF7C7F1F32C5490067CE34 /* ZYColumnDownPromptView.swift in Sources */,
 				23BF7C861F32C5490067CE34 /* ZYColumnSpreadView.swift in Sources */,
 				23BF7C881F32C5490067CE34 /* ZYColumnViewController.swift in Sources */,
+				2363BED31F4146A600CA2F51 /* TtNavigationController.swift in Sources */,
 				2315270E1F34518000E7AB40 /* NetworkManager.swift in Sources */,
 				2380DFBD1F3964E400EAF378 /* MyTableViewCell.swift in Sources */,
 				231527071F34492D00E7AB40 /* MainTableViewController.swift in Sources */,
@@ -464,7 +468,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = /Users/ntt/Desktop/PersonalTest/PersonalTest/Header.h;
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/ntt/Desktop/github/PersonalTest/Header.h;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -483,7 +487,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = /Users/ntt/Desktop/PersonalTest/PersonalTest/Header.h;
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/ntt/Desktop/github/PersonalTest/Header.h;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

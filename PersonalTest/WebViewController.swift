@@ -13,6 +13,7 @@ class WebViewController: UIViewController ,UIWebViewDelegate{
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = true
         let urlString = "https://api.weibo.com/oauth2/authorize?client_id=2481686703&response_type=code&redirect_uri=http://www.weibo.com"
         guard let url: URL = URL(string: urlString) else {
             return
@@ -48,8 +49,10 @@ class WebViewController: UIViewController ,UIWebViewDelegate{
 
                 return
             }
-            UserDefaults.standard.set(true, forKey:"certified")
             let userModel: UserModel = UserModel(dictionary: result!)
+
+            UserDefaults.standard.set(true, forKey:"certified")
+            self.performSegue(withIdentifier: "pushSegue", sender: self)
         }
     }
 

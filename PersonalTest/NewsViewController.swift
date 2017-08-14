@@ -16,7 +16,6 @@ class NewsViewController: UIViewController ,ZYColumnViewControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         view.backgroundColor = UIColor.gray
 
         // 注意，如果frame 位置，显示出现问题，尝试设置这个属性

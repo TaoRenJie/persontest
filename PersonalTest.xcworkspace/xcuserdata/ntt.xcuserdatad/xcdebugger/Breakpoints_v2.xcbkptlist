@@ -90,60 +90,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PersonalTest/NewMainController.swift"
-            timestampString = "523960058.919727"
+            timestampString = "524375681.436969"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PersonalTest.NewMainController.viewDidLoad () -&gt; ()"
-                  moduleName = "PersonalTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ntt/Desktop/PersonalTest/PersonalTest/NewMainController.swift"
-                  timestampString = "523960070.089857"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "61"
-                  endingLineNumber = "61"
-                  offsetFromSymbolStart = "432">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PersonalTest.NewMainController.(viewDidLoad () -&gt; ()).(implicit closure #1)"
-                  moduleName = "PersonalTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ntt/Desktop/PersonalTest/PersonalTest/NewMainController.swift"
-                  timestampString = "523960070.092157"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "61"
-                  endingLineNumber = "61"
-                  offsetFromSymbolStart = "16">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PersonalTest/WebViewController.swift"
-            timestampString = "523960111.967233"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "loadAccessToken(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

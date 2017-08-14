@@ -54,9 +54,12 @@ class NewMainController: UIViewController ,UITableViewDelegate ,UITableViewDataS
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let user = UserModel.shared
+        print(user.access_token ?? String() )
+        self.navigationController?.navigationBar.isHidden = false
         self.loadDataSource()
         // 注册cell
-        self.tableView.register(UINib(nibName: "MyTableViewCell", bundle: nil), forCellReuseIdentifier: "id")
+        self.tableView.register(UINib(nibName: "MyTableViewCell", bundle: nil), forCellReuseIdentifier: "maincell")
         let model = UserModel.shared
         print(model.access_token ?? String())
     }
@@ -74,7 +77,7 @@ class NewMainController: UIViewController ,UITableViewDelegate ,UITableViewDataS
     }
 
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell: MyTableViewCell = tableView.dequeueReusableCell(withIdentifier: "id") as? MyTableViewCell else {
+        guard let cell: MyTableViewCell = tableView.dequeueReusableCell(withIdentifier: "maincell") as? MyTableViewCell else {
             return UITableViewCell()
         }
         let cellModel: Model = myDataSource[indexPath.row]
