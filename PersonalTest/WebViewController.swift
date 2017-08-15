@@ -50,7 +50,7 @@ class WebViewController: UIViewController ,UIWebViewDelegate{
                 return
             }
             let userModel: UserModel = UserModel(dictionary: result!)
-
+            UserDefaults.standard.set(userModel.access_token, forKey:"access_token")
             UserDefaults.standard.set(true, forKey:"certified")
             self.performSegue(withIdentifier: "pushSegue", sender: self)
         }

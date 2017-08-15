@@ -23,6 +23,6 @@ class MyTableViewCell: UITableViewCell {
     }
 
     func setData(model: Model) {
-        self.titleLabel.text = model.opt_name
+        self.titleLabel.text = model.text
     }
 }

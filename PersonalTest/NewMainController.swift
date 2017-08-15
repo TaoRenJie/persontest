@@ -7,40 +7,42 @@
 //
 
 import UIKit
-
+//"2.00DdB5nFtEuwhCddf9b1bc170GUDFp"
 class NewMainController: UIViewController ,UITableViewDelegate ,UITableViewDataSource{
     @IBOutlet weak var tableView: UITableView!
 
-    let kUrl = "http://apiv2.yangkeduo.com/operation/15/groups"
-    let parameters = [
-        "opt_type": 1,
-        "size" : 5,
-        "offset" : 5
-    ]
+    var access_token = ""
+
+
 
     private var myDataSource: Array<Model> = []
     private var useArray: Array<[String: Any]> = []
 
     private func loadDataSource() {
+        let kUrl = "https://api.weibo.com/2/statuses/home_timeline.json"
+        let parameters = [
+            "access_token": self.access_token,
+            "count": 1
+        ] as [String : Any]
         NetworkManager.shared.request(requestType: .GET, urlString: kUrl, parameters: parameters as [String : AnyObject]) { (json) in
-            guard let dicArray = json?["opt_infos"] as? [[String : Any]] else{
+            guard let dicArray = json?["statuses"] as? [[String : Any]] else{
                 return
             }
             var purposeDictionary: [String: Any] = [:]
             for i in 0..<dicArray.count {
                 let what = dicArray[i]
+                guard let created_at = what["created_at"] else {
+                    return
+                }
                 guard let id = what["id"] else {
                     return
                 }
-                guard let opt_name = what["opt_name"] else {
+                guard let text = what["text"] else {
                     return
                 }
-                guard let priority = what["priority"] else {
-                    return
-                }
+                purposeDictionary.updateValue(created_at, forKey: "created_at")
                 purposeDictionary.updateValue(id, forKey: "id")
-                purposeDictionary.updateValue(opt_name, forKey: "opt_name")
-                purposeDictionary.updateValue(priority, forKey: "priority")
+                purposeDictionary.updateValue(text, forKey: "text")
                 self.useArray.append(purposeDictionary)
             }
             let dataSource: Array<[String: Any]> = self.useArray
@@ -54,14 +56,12 @@ class NewMainController: UIViewController ,UITableViewDelegate ,UITableViewDataS
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let user = UserModel.shared
-        print(user.access_token ?? String() )
         self.navigationController?.navigationBar.isHidden = false
+        let gotAccess_token = UserDefaults.standard.value(forKey: "access_token")
+        self.access_token = gotAccess_token as! String
         self.loadDataSource()
         // 注册cell
         self.tableView.register(UINib(nibName: "MyTableViewCell", bundle: nil), forCellReuseIdentifier: "maincell")
-        let model = UserModel.shared
-        print(model.access_token ?? String())
     }
 
     //    // MARK: - Table view data source

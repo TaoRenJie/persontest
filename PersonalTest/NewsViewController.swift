@@ -22,7 +22,7 @@ class NewsViewController: UIViewController ,ZYColumnViewControllerDelegate {
         self.automaticallyAdjustsScrollViewInsets = false
 
         // 注意，arrayTitles 不能为空
-        let arrayTitles = ["头条","搞事"]
+        let arrayTitles = ["头条"]
         let arraySpareTitles = ["房产","直播","轻松一刻","独家","社会","手机","数码","酒香","美女","艺术","读书","情感","论坛","博客","NBA","旅游","跑步","影视","政务","本地","汽车","公开课","游戏","独家","时尚","轻松一刻","社会","漫画"]
         self.initColumnVC(arrayTitles, arraySpareTitles, 1)
 

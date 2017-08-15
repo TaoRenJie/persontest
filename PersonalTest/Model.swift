@@ -10,9 +10,9 @@ import UIKit
 
 class Model: NSObject {
     // 模型中用到的属性
-    var id: Any = ""
-    var opt_name: String = ""
-    var priority: Any = ""
+    var id: Int64?
+    var text: String = ""
+    var created_at: String = ""
     
     override func setValue(_ value: Any?, forUndefinedKey key: String) {
 

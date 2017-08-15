@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kb4-Zg-H74">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="94" width="375" height="573"/>
                                 <connections>
                                     <outlet property="delegate" destination="cE1-lz-T0l" id="qj4-ER-Ejw"/>
                                 </connections>
@@ -31,7 +31,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="oaF-hj-0j2" firstAttribute="top" secondItem="kb4-Zg-H74" secondAttribute="bottom" id="JfU-XN-LHU"/>
-                            <constraint firstItem="kb4-Zg-H74" firstAttribute="top" secondItem="aqM-Gb-cZf" secondAttribute="bottom" id="W4Q-qi-iok"/>
+                            <constraint firstItem="kb4-Zg-H74" firstAttribute="top" secondItem="aqM-Gb-cZf" secondAttribute="bottom" constant="30" id="W4Q-qi-iok"/>
                             <constraint firstAttribute="trailing" secondItem="kb4-Zg-H74" secondAttribute="trailing" id="oS8-xF-uBg"/>
                             <constraint firstItem="kb4-Zg-H74" firstAttribute="leading" secondItem="1tg-zz-ifg" secondAttribute="leading" id="qYB-Ap-0kr"/>
                         </constraints>
