@@ -17,6 +17,7 @@
 		235A53AC1F302BB10038DBF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 235A53AB1F302BB10038DBF0 /* Assets.xcassets */; };
 		235A53AF1F302BB10038DBF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 235A53AD1F302BB10038DBF0 /* LaunchScreen.storyboard */; };
 		2363BED31F4146A600CA2F51 /* TtNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2363BED21F4146A500CA2F51 /* TtNavigationController.swift */; };
+		2376C05E1F4414A50016B73B /* UserDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2376C05D1F4414A50016B73B /* UserDetailModel.swift */; };
 		2380DFBD1F3964E400EAF378 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2380DFBB1F3964E400EAF378 /* MyTableViewCell.swift */; };
 		2380DFBE1F3964E400EAF378 /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2380DFBC1F3964E400EAF378 /* MyTableViewCell.xib */; };
 		2380DFC01F39AD9600EAF378 /* NewMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2380DFBF1F39AD9600EAF378 /* NewMainController.swift */; };
@@ -65,6 +66,7 @@
 		235A53AE1F302BB10038DBF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		235A53B01F302BB10038DBF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2363BED21F4146A500CA2F51 /* TtNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TtNavigationController.swift; sourceTree = "<group>"; };
+		2376C05D1F4414A50016B73B /* UserDetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailModel.swift; sourceTree = "<group>"; };
 		2380DFBB1F3964E400EAF378 /* MyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		2380DFBC1F3964E400EAF378 /* MyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
 		2380DFBF1F39AD9600EAF378 /* NewMainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMainController.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				2380DFBC1F3964E400EAF378 /* MyTableViewCell.xib */,
 				23BF7C891F32C6030067CE34 /* NewsViewController.swift */,
 				2315270F1F345C4300E7AB40 /* Model.swift */,
+				2376C05D1F4414A50016B73B /* UserDetailModel.swift */,
 				2315270D1F34518000E7AB40 /* NetworkManager.swift */,
 				2380DFBF1F39AD9600EAF378 /* NewMainController.swift */,
 				23D41C731F3AB6D400C54A40 /* WebViewController.swift */,
@@ -321,6 +324,7 @@
 				23BF7C7F1F32C5490067CE34 /* ZYColumnDownPromptView.swift in Sources */,
 				23BF7C861F32C5490067CE34 /* ZYColumnSpreadView.swift in Sources */,
 				23BF7C881F32C5490067CE34 /* ZYColumnViewController.swift in Sources */,
+				2376C05E1F4414A50016B73B /* UserDetailModel.swift in Sources */,
 				2363BED31F4146A600CA2F51 /* TtNavigationController.swift in Sources */,
 				2315270E1F34518000E7AB40 /* NetworkManager.swift in Sources */,
 				2380DFBD1F3964E400EAF378 /* MyTableViewCell.swift in Sources */,

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 //"2.00DdB5nFtEuwhCddf9b1bc170GUDFp"
 class NewMainController: UIViewController ,UITableViewDelegate ,UITableViewDataSource{
     @IBOutlet weak var tableView: UITableView!
@@ -19,32 +20,33 @@ class NewMainController: UIViewController ,UITableViewDelegate ,UITableViewDataS
     private var useArray: Array<[String: Any]> = []
 
     private func loadDataSource() {
-        let kUrl = "https://api.weibo.com/2/statuses/home_timeline.json"
+        let kUrl = "https://api.weibo.com/2/statuses/user_timeline.json"
         let parameters = [
             "access_token": self.access_token,
-            "count": 1
+            "count": 1,
+            "feature":1
         ] as [String : Any]
         NetworkManager.shared.request(requestType: .GET, urlString: kUrl, parameters: parameters as [String : AnyObject]) { (json) in
-            guard let dicArray = json?["statuses"] as? [[String : Any]] else{
+            let jsonData = JSON(json as AnyObject)
+            guard let text: String = jsonData["statuses","text"].string else {
                 return
             }
-            var purposeDictionary: [String: Any] = [:]
-            for i in 0..<dicArray.count {
-                let what = dicArray[i]
-                guard let created_at = what["created_at"] else {
-                    return
-                }
-                guard let id = what["id"] else {
-                    return
-                }
-                guard let text = what["text"] else {
-                    return
-                }
-                purposeDictionary.updateValue(created_at, forKey: "created_at")
-                purposeDictionary.updateValue(id, forKey: "id")
-                purposeDictionary.updateValue(text, forKey: "text")
-                self.useArray.append(purposeDictionary)
-            }
+//            var purposeDictionary: [String: Any] = [:]
+//            purposeDictionary.updateValue(text, forKey: "text")
+//            self.useArray.append(purposeDictionary)
+
+//            guard let dicArray = json?["statuses"] as? [[String : Any]] else{
+//                return
+//            }
+//            var purposeDictionary: [String: Any] = [:]
+//            for i in 0..<dicArray.count {
+//                let what = dicArray[i]
+//                guard let text = what["text"] else {
+//                    return
+//                }
+//                purposeDictionary.updateValue(text, forKey: "text")
+//                self.useArray.append(purposeDictionary)
+//            }
             let dataSource: Array<[String: Any]> = self.useArray
             for dictionaryModel in dataSource {
                 let model: Model = Model(dictionary: dictionaryModel)

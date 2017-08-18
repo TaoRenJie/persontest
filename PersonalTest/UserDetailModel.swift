@@ -1,19 +1,18 @@
 //
-//  Model.swift
+//  UserDetailModel.swift
 //  PersonalTest
 //
-//  Created by taorenjie on 2017/8/4.
+//  Created by taorenjie on 2017/8/16.
 //  Copyright © 2017年 tt. All rights reserved.
 //
 
 import UIKit
 
-class Model: NSObject {
-    // 模型中用到的属性
+class UserDetailModel: NSObject {
 
     // 微博信息内容
-    var text: String = ""
     
+
     override func setValue(_ value: Any?, forUndefinedKey key: String) {
 
     }
