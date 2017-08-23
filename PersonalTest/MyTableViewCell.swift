@@ -10,6 +10,7 @@ import UIKit
 
 class MyTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,5 +25,6 @@ class MyTableViewCell: UITableViewCell {
 
     func setData(model: Model) {
         self.titleLabel.text = model.text
+        self.nameLabel.text = model.name
     }
 }

@@ -13,6 +13,7 @@ class Model: NSObject {
 
     // 微博信息内容
     var text: String = ""
+    var name: String = ""
     
     override func setValue(_ value: Any?, forUndefinedKey key: String) {
 

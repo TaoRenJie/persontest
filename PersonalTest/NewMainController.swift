@@ -28,9 +28,25 @@ class NewMainController: UIViewController ,UITableViewDelegate ,UITableViewDataS
         ] as [String : Any]
         NetworkManager.shared.request(requestType: .GET, urlString: kUrl, parameters: parameters as [String : AnyObject]) { (json) in
             let jsonData = JSON(json as AnyObject)
-            guard let text: String = jsonData["statuses","text"].string else {
+            guard let jsonData2 = jsonData["statuses"].array else {
                 return
             }
+            var purposeDictionary: [String: Any] = [:]
+            for what in jsonData2 {
+                guard let text = what["text"].string else {
+                    return
+                }
+                guard let userDictionary = what["user"].dictionary else {
+                    return
+                }
+                guard let userName = userDictionary["name"]?.string else {
+                    return
+                }
+                purposeDictionary.updateValue(text, forKey: "text")
+                purposeDictionary.updateValue(userName, forKey: "name")
+                self.useArray.append(purposeDictionary)
+            }
+
 //            var purposeDictionary: [String: Any] = [:]
 //            purposeDictionary.updateValue(text, forKey: "text")
 //            self.useArray.append(purposeDictionary)
