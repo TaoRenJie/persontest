@@ -46,6 +46,7 @@
                 <outlet property="nameLabel" destination="jGU-O4-A9L" id="G5y-bb-zqO"/>
                 <outlet property="titleLabel" destination="qcI-fX-Kty" id="mOn-uK-kGu"/>
             </connections>
+            <point key="canvasLocation" x="0.0" y="53"/>
         </tableViewCell>
     </objects>
 </document>

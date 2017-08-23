@@ -8,13 +8,12 @@
 
 import UIKit
 import SwiftyJSON
-//"2.00DdB5nFtEuwhCddf9b1bc170GUDFp"
+
 class NewMainController: UIViewController ,UITableViewDelegate ,UITableViewDataSource{
     @IBOutlet weak var tableView: UITableView!
 
     var access_token = ""
-
-
+    var refreshControl = UIRefreshControl()
 
     private var myDataSource: Array<Model> = []
     private var useArray: Array<[String: Any]> = []
@@ -23,11 +22,11 @@ class NewMainController: UIViewController ,UITableViewDelegate ,UITableViewDataS
         let kUrl = "https://api.weibo.com/2/statuses/user_timeline.json"
         let parameters = [
             "access_token": self.access_token,
-            "count": 1,
             "feature":1
         ] as [String : Any]
         NetworkManager.shared.request(requestType: .GET, urlString: kUrl, parameters: parameters as [String : AnyObject]) { (json) in
             let jsonData = JSON(json as AnyObject)
+            self.useArray.removeAll()
             guard let jsonData2 = jsonData["statuses"].array else {
                 return
             }
@@ -46,23 +45,6 @@ class NewMainController: UIViewController ,UITableViewDelegate ,UITableViewDataS
                 purposeDictionary.updateValue(userName, forKey: "name")
                 self.useArray.append(purposeDictionary)
             }
-
-//            var purposeDictionary: [String: Any] = [:]
-//            purposeDictionary.updateValue(text, forKey: "text")
-//            self.useArray.append(purposeDictionary)
-
-//            guard let dicArray = json?["statuses"] as? [[String : Any]] else{
-//                return
-//            }
-//            var purposeDictionary: [String: Any] = [:]
-//            for i in 0..<dicArray.count {
-//                let what = dicArray[i]
-//                guard let text = what["text"] else {
-//                    return
-//                }
-//                purposeDictionary.updateValue(text, forKey: "text")
-//                self.useArray.append(purposeDictionary)
-//            }
             let dataSource: Array<[String: Any]> = self.useArray
             for dictionaryModel in dataSource {
                 let model: Model = Model(dictionary: dictionaryModel)
@@ -80,6 +62,17 @@ class NewMainController: UIViewController ,UITableViewDelegate ,UITableViewDataS
         self.loadDataSource()
         // 注册cell
         self.tableView.register(UINib(nibName: "MyTableViewCell", bundle: nil), forCellReuseIdentifier: "maincell")
+        self.refreshControl.addTarget(self, action: #selector(refreshData),
+                                       for: .valueChanged)
+        self.refreshControl.attributedTitle = NSAttributedString(string: "下拉刷新数据")
+        self.tableView.addSubview(self.refreshControl)
+    }
+
+    func refreshData() {
+        self.myDataSource.removeAll()
+        self.loadDataSource()
+        self.tableView.reloadData()
+        self.refreshControl.endRefreshing()
     }
 
     //    // MARK: - Table view data source
