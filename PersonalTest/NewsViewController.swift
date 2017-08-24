@@ -16,11 +16,9 @@ class NewsViewController: UIViewController ,ZYColumnViewControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.gray
-
+        self.contentScrollView.frame.size.height = self.view.frame.height
         // 注意，如果frame 位置，显示出现问题，尝试设置这个属性
         self.automaticallyAdjustsScrollViewInsets = false
-
         // 注意，arrayTitles 不能为空
         let arrayTitles = ["头条"]
         let arraySpareTitles = ["房产","直播","轻松一刻","独家","社会","手机","数码","酒香","美女","艺术","读书","情感","论坛","博客","NBA","旅游","跑步","影视","政务","本地","汽车","公开课","游戏","独家","时尚","轻松一刻","社会","漫画"]
@@ -45,7 +43,7 @@ class NewsViewController: UIViewController ,ZYColumnViewControllerDelegate {
                 return
             }
             self.addChildViewController(newView)
-            newView.view.frame = CGRect(x: self.view.frame.width * CGFloat(i),y: 0,width: self.view.frame.width,height: self.view.frame.height - 64)
+            newView.view.frame = CGRect(x: self.view.frame.width * CGFloat(i),y: 0,width: self.view.frame.width,height: self.view.frame.height)
             self.contentScrollView.addSubview(newView.view)
         }
         contentScrollView.contentSize = CGSize(width: CGFloat(titles.count) * UIScreen.main.bounds.width, height: 0)
@@ -72,7 +70,7 @@ class NewsViewController: UIViewController ,ZYColumnViewControllerDelegate {
                 return
             }
             self.addChildViewController(newView)
-            newView.view.frame = CGRect(x: self.view.frame.width * CGFloat(i),y: 0,width: self.view.frame.width,height: self.view.frame.height - 64)
+            newView.view.frame = CGRect(x: self.view.frame.width * CGFloat(i),y: 0,width: self.view.frame.width,height: self.view.frame.height)
             self.contentScrollView.addSubview(newView.view)
         }
         contentScrollView.contentSize = CGSize(width: CGFloat(arrayTitles.count) * UIScreen.main.bounds.width, height: 0)

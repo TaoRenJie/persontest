@@ -41,8 +41,12 @@ class NewMainController: UIViewController ,UITableViewDelegate ,UITableViewDataS
                 guard let userName = userDictionary["name"]?.string else {
                     return
                 }
+                guard let headImageName = userDictionary["profile_image_url"]?.string else {
+                    return
+                }
                 purposeDictionary.updateValue(text, forKey: "text")
                 purposeDictionary.updateValue(userName, forKey: "name")
+                purposeDictionary.updateValue(headImageName, forKey: "headImageString")
                 self.useArray.append(purposeDictionary)
             }
             let dataSource: Array<[String: Any]> = self.useArray
@@ -84,7 +88,7 @@ class NewMainController: UIViewController ,UITableViewDelegate ,UITableViewDataS
 //        guard let cell: MyTableViewCell = tableView.dequeueReusableCell(withIdentifier: "maincell") as? MyTableViewCell else {
 //            return 0
 //        }
-//        return cell.frame.height
+//        return cell.frame.size.height
 //    }
 
      func numberOfSections(in tableView: UITableView) -> Int {
