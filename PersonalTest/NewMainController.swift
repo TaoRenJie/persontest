@@ -66,6 +66,9 @@ class NewMainController: UIViewController ,UITableViewDelegate ,UITableViewDataS
                                        for: .valueChanged)
         self.refreshControl.attributedTitle = NSAttributedString(string: "下拉刷新数据")
         self.tableView.addSubview(self.refreshControl)
+        // 不知道有什么用（必须设置这个cell才会内容适应自适应高度）
+        tableView.estimatedRowHeight = 300
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
 
     func refreshData() {
@@ -76,7 +79,14 @@ class NewMainController: UIViewController ,UITableViewDelegate ,UITableViewDataS
     }
 
     //    // MARK: - Table view data source
-    //
+    // 显示当前xib的高度
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        guard let cell: MyTableViewCell = tableView.dequeueReusableCell(withIdentifier: "maincell") as? MyTableViewCell else {
+//            return 0
+//        }
+//        return cell.frame.height
+//    }
+
      func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1

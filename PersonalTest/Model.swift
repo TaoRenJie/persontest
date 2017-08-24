@@ -14,6 +14,7 @@ class Model: NSObject {
     // 微博信息内容
     var text: String = ""
     var name: String = ""
+    var headImageString = ""
     
     override func setValue(_ value: Any?, forUndefinedKey key: String) {
 
