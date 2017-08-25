@@ -15,6 +15,7 @@ class Model: NSObject {
     var text: String = ""
     var name: String = ""
     var headImageString: String = ""
+    var pictureArray: Array<String> = []
     
     override func setValue(_ value: Any?, forUndefinedKey key: String) {
 

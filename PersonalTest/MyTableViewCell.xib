@@ -35,6 +35,13 @@
                             <constraint firstAttribute="width" constant="80" id="zA9-uI-TAX"/>
                         </constraints>
                     </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2De-tl-xg7">
+                        <rect key="frame" x="0.0" y="266.5" width="384" height="100"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="100" id="h7t-WQ-ntH"/>
+                        </constraints>
+                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabel" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcI-fX-Kty">
                         <rect key="frame" x="0.0" y="90" width="383" height="61"/>
                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
@@ -44,10 +51,13 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="FX4-gD-gkv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ExE-Ub-DmZ"/>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="qcI-fX-Kty" secondAttribute="bottom" id="Nbn-bN-13u"/>
+                    <constraint firstAttribute="bottom" secondItem="2De-tl-xg7" secondAttribute="bottom" id="NMQ-gR-WCO"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qcI-fX-Kty" secondAttribute="trailing" id="Q0Q-o4-NLF"/>
                     <constraint firstItem="jGU-O4-A9L" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="150" id="X70-uF-dbf"/>
+                    <constraint firstItem="2De-tl-xg7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="cfB-7k-Qlc"/>
                     <constraint firstItem="jGU-O4-A9L" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="d9n-Pk-JFa"/>
+                    <constraint firstAttribute="trailing" secondItem="2De-tl-xg7" secondAttribute="trailing" id="dh9-4j-iqq"/>
+                    <constraint firstItem="2De-tl-xg7" firstAttribute="top" relation="greaterThanOrEqual" secondItem="qcI-fX-Kty" secondAttribute="bottom" id="h0p-xQ-3IJ"/>
                     <constraint firstItem="qcI-fX-Kty" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="kb8-B2-sfi"/>
                     <constraint firstItem="FX4-gD-gkv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="uvW-oD-OC6"/>
                     <constraint firstItem="qcI-fX-Kty" firstAttribute="top" secondItem="jGU-O4-A9L" secondAttribute="bottom" constant="60" id="xzZ-ga-Uzp"/>
@@ -56,6 +66,8 @@
             <connections>
                 <outlet property="headImageView" destination="FX4-gD-gkv" id="4Ki-mL-ejJ"/>
                 <outlet property="nameLabel" destination="jGU-O4-A9L" id="G5y-bb-zqO"/>
+                <outlet property="pictureView" destination="2De-tl-xg7" id="Jx1-7Z-V0e"/>
+                <outlet property="pictureViewheightConstraint" destination="h7t-WQ-ntH" id="zny-Iw-fj2"/>
                 <outlet property="titleLabel" destination="qcI-fX-Kty" id="mOn-uK-kGu"/>
             </connections>
             <point key="canvasLocation" x="-26" y="205.5"/>

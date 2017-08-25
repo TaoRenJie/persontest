@@ -31,6 +31,7 @@ class NewMainController: UIViewController ,UITableViewDelegate ,UITableViewDataS
                 return
             }
             var purposeDictionary: [String: Any] = [:]
+            var pictureArray: Array<String> = []
             for what in jsonData2 {
                 guard let text = what["text"].string else {
                     return
@@ -43,6 +44,21 @@ class NewMainController: UIViewController ,UITableViewDelegate ,UITableViewDataS
                 }
                 guard let headImageName = userDictionary["profile_image_url"]?.string else {
                     return
+                }
+                guard let pictureJson: Array = what["pic_urls"].array else {
+                    return
+                }
+                if pictureJson.count != 0 {
+                    for pictureStringJson in pictureJson {
+                        guard let pictureString = pictureStringJson["thumbnail_pic"].string else {
+                            return
+                        }
+                        pictureArray.append(pictureString)
+                    }
+                    purposeDictionary.updateValue(pictureArray, forKey: "pictureArray")
+                    pictureArray.removeAll()
+                } else {
+                    purposeDictionary.updateValue(Array<String>(), forKey: "pictureArray")
                 }
                 purposeDictionary.updateValue(text, forKey: "text")
                 purposeDictionary.updateValue(userName, forKey: "name")
@@ -102,11 +118,12 @@ class NewMainController: UIViewController ,UITableViewDelegate ,UITableViewDataS
     }
 
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell: MyTableViewCell = tableView.dequeueReusableCell(withIdentifier: "maincell") as? MyTableViewCell else {
-            return UITableViewCell()
+        var cell = tableView.dequeueReusableCell(withIdentifier: "maincell") as? MyTableViewCell
+        if cell == nil {
+            cell = Bundle.main.loadNibNamed("MyTableViewCell", owner: nil, options: nil)?.last as? MyTableViewCell
         }
         let cellModel: Model = myDataSource[indexPath.row]
-        cell.setData(model: cellModel)
-        return cell
+        cell?.setData(model: cellModel)
+        return cell!
     }
 }
