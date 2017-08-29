@@ -42,9 +42,11 @@ class MyTableViewCell: UITableViewCell {
     func setupUI() {
         headImageView.layer.masksToBounds = true
         headImageView.layer.cornerRadius = headImageView.frame.height / 2
+        for obj in self.pictureView.subviews {
+            obj.removeFromSuperview()
+        }
         if self.pictureArray.count == 0 {
-            self.pictureViewheightConstraint.constant = 0
-            self.imageView?.removeFromSuperview()
+            pictureViewheightConstraint.constant = 0
         } else if self.pictureArray.count >= 1 && self.pictureArray.count <= 3 {
             self.pictureViewheightConstraint.constant = 30 + imageViewHeight
             for count in 0 ..< self.pictureArray.count  {
@@ -89,5 +91,6 @@ class MyTableViewCell: UITableViewCell {
                 self.pictureView?.addSubview(imageView)
             }
         }
+//        self.layoutIfNeeded()
     }
 }
