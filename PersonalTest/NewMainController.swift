@@ -118,6 +118,12 @@ class NewMainController: UIViewController ,UITableViewDelegate ,UITableViewDataS
     }
 
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        guard let cell: MyTableViewCell = tableView.dequeueReusableCell(withIdentifier: "maincell") as? MyTableViewCell else {
+//            return UITableViewCell()
+//        }
+//        let cellModel: Model = myDataSource[indexPath.row]
+//        cell.setData(model: cellModel)
+//        return cell
         var cell = tableView.dequeueReusableCell(withIdentifier: "maincell") as? MyTableViewCell
         if cell == nil {
             cell = Bundle.main.loadNibNamed("MyTableViewCell", owner: nil, options: nil)?.last as? MyTableViewCell

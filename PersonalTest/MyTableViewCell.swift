@@ -34,8 +34,7 @@ class MyTableViewCell: UITableViewCell {
         guard let url = URL(string: model.headImageString) else {
             return
         }
-        let data = try! Data(contentsOf: url)
-        self.headImageView.image = UIImage(data:data)
+        self.headImageView.setImageWith(url)
         self.pictureArray = model.pictureArray
         setupUI()
     }
@@ -45,6 +44,7 @@ class MyTableViewCell: UITableViewCell {
         headImageView.layer.cornerRadius = headImageView.frame.height / 2
         if self.pictureArray.count == 0 {
             self.pictureViewheightConstraint.constant = 0
+            self.imageView?.removeFromSuperview()
         } else if self.pictureArray.count >= 1 && self.pictureArray.count <= 3 {
             self.pictureViewheightConstraint.constant = 30 + imageViewHeight
             for count in 0 ..< self.pictureArray.count  {
@@ -53,8 +53,7 @@ class MyTableViewCell: UITableViewCell {
                 guard let url = URL(string:pictureArray[count]) else {
                     return
                 }
-                let data = try! Data(contentsOf: url)
-                imageView.image = UIImage(data:data)
+                imageView.setImageWith(url)
                 self.pictureView?.addSubview(imageView)
             }
         } else if self.pictureArray.count >= 4 && self.pictureArray.count <= 6 {
@@ -69,8 +68,7 @@ class MyTableViewCell: UITableViewCell {
                 guard let url = URL(string:pictureArray[count]) else {
                     return
                 }
-                let data = try! Data(contentsOf: url)
-                imageView.image = UIImage(data:data)
+                imageView.setImageWith(url)
                 self.pictureView?.addSubview(imageView)
             }
         } else if self.pictureArray.count >= 7 && self.pictureArray.count <= 9 {
@@ -87,8 +85,7 @@ class MyTableViewCell: UITableViewCell {
                 guard let url = URL(string:pictureArray[count]) else {
                     return
                 }
-                let data = try! Data(contentsOf: url)
-                imageView.image = UIImage(data:data)
+                imageView.setImageWith(url)
                 self.pictureView?.addSubview(imageView)
             }
         }
