@@ -8,12 +8,18 @@
 
 import UIKit
 
+protocol cellCommentDelegate:NSObjectProtocol {
+    func pushViewController(id: Int64)
+}
 class MyTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var headImageView: UIImageView!
     @IBOutlet weak var pictureView: UIView!
     @IBOutlet weak var pictureViewheightConstraint: NSLayoutConstraint!
+
+    weak var delegate:cellCommentDelegate?
+    var cellID: Int64 = 0
 
     var pictureArray: Array<String> = []
     var imageViewHeight: CGFloat = (UIScreen.main.bounds.width - 60)/3
@@ -27,6 +33,11 @@ class MyTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+
+    @IBAction func commentButtonAction(_ sender: UIButton) {
+        self.delegate?.pushViewController(id: self.cellID)
+    }
+
     func setData(model: Model) {
         self.titleLabel.text = model.text
         self.nameLabel.text = model.name
@@ -35,6 +46,7 @@ class MyTableViewCell: UITableViewCell {
         }
         self.headImageView.setImageWith(url)
         self.pictureArray = model.pictureArray
+        self.cellID = model.id
         setupUI()
     }
 

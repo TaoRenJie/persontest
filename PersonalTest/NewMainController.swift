@@ -9,7 +9,7 @@
 import UIKit
 import SwiftyJSON
 
-class NewMainController: UIViewController ,UITableViewDelegate ,UITableViewDataSource{
+class NewMainController: UIViewController ,UITableViewDelegate ,UITableViewDataSource ,cellCommentDelegate{
     @IBOutlet weak var tableView: UITableView!
 
     var access_token = ""
@@ -33,6 +33,9 @@ class NewMainController: UIViewController ,UITableViewDelegate ,UITableViewDataS
             var purposeDictionary: [String: Any] = [:]
             var pictureArray: Array<String> = []
             for what in jsonData2 {
+                guard let id = what["id"].int64 else {
+                    return
+                }
                 guard let text = what["text"].string else {
                     return
                 }
@@ -60,6 +63,7 @@ class NewMainController: UIViewController ,UITableViewDelegate ,UITableViewDataS
                 } else {
                     purposeDictionary.updateValue(Array<String>(), forKey: "pictureArray")
                 }
+                purposeDictionary.updateValue(id, forKey: "id")
                 purposeDictionary.updateValue(text, forKey: "text")
                 purposeDictionary.updateValue(userName, forKey: "name")
                 purposeDictionary.updateValue(headImageName, forKey: "headImageString")
@@ -118,18 +122,26 @@ class NewMainController: UIViewController ,UITableViewDelegate ,UITableViewDataS
     }
 
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        guard let cell: MyTableViewCell = tableView.dequeueReusableCell(withIdentifier: "maincell") as? MyTableViewCell else {
-//            return UITableViewCell()
-//        }
-//        let cellModel: Model = myDataSource[indexPath.row]
-//        cell.setData(model: cellModel)
-//        return cell
-        var cell = tableView.dequeueReusableCell(withIdentifier: "maincell") as? MyTableViewCell
-        if cell == nil {
-            cell = Bundle.main.loadNibNamed("MyTableViewCell", owner: nil, options: nil)?.last as? MyTableViewCell
+        guard let cell: MyTableViewCell = tableView.dequeueReusableCell(withIdentifier: "maincell") as? MyTableViewCell else {
+            return UITableViewCell()
         }
         let cellModel: Model = myDataSource[indexPath.row]
-        cell?.setData(model: cellModel)
-        return cell!
+        cell.setData(model: cellModel)
+        cell.delegate = self
+        return cell
+//        var cell = tableView.dequeueReusableCell(withIdentifier: "maincell") as? MyTableViewCell
+//        if cell == nil {
+//            cell = Bundle.main.loadNibNamed("MyTableViewCell", owner: nil, options: nil)?.last as? MyTableViewCell
+//        }
+//        let cellModel: Model = myDataSource[indexPath.row]
+//        cell?.setData(model: cellModel)
+//        return cell!
+    }
+
+    func pushViewController(id: Int64) {
+//        guard let weiBoContentViewController: WeiBoContentViewController = Bundle.main.loadNibNamed("WeiBoContentViewController", owner: nil, options: nil)?.last as? WeiBoContentViewController else {
+//            return
+//        }
+//        self.navigationController?.pushViewController(weiBoContentViewController, animated: true)
     }
 }

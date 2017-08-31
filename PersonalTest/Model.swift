@@ -12,6 +12,7 @@ class Model: NSObject {
     // 模型中用到的属性
 
     // 微博信息内容
+    var id: Int64 = 0
     var text: String = ""
     var name: String = ""
     var headImageString: String = ""

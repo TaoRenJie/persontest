@@ -11,6 +11,7 @@
 		2315270E1F34518000E7AB40 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2315270D1F34518000E7AB40 /* NetworkManager.swift */; };
 		231527101F345C4300E7AB40 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2315270F1F345C4300E7AB40 /* Model.swift */; };
 		2341D1CB1F31D17000EC12B8 /* video1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2341D1CA1F31D17000EC12B8 /* video1.mp4 */; };
+		2343053B1F57AA45006FE918 /* WeiBoContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234305391F57AA45006FE918 /* WeiBoContentViewController.swift */; };
 		235A53A21F302BB10038DBF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235A53A11F302BB10038DBF0 /* AppDelegate.swift */; };
 		235A53A71F302BB10038DBF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 235A53A51F302BB10038DBF0 /* Main.storyboard */; };
 		235A53AA1F302BB10038DBF0 /* PersonalTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 235A53A81F302BB10038DBF0 /* PersonalTest.xcdatamodeld */; };
@@ -58,6 +59,7 @@
 		2341D1C21F31670F00EC12B8 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = "../../Library/Developer/Xcode/DerivedData/PersonalTest-fyomgnroowhgujeohfospabpmpim/Build/Products/Debug-iphoneos/SnapKit/SnapKit.framework"; sourceTree = "<group>"; };
 		2341D1C81F31C0DE00EC12B8 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		2341D1CA1F31D17000EC12B8 /* video1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video1.mp4; sourceTree = "<group>"; };
+		234305391F57AA45006FE918 /* WeiBoContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeiBoContentViewController.swift; sourceTree = "<group>"; };
 		235A539E1F302BB10038DBF0 /* PersonalTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonalTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		235A53A11F302BB10038DBF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		235A53A61F302BB10038DBF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				231527051F34492D00E7AB40 /* MainTableViewController.swift */,
 				2380DFBB1F3964E400EAF378 /* MyTableViewCell.swift */,
 				2380DFBC1F3964E400EAF378 /* MyTableViewCell.xib */,
+				234305391F57AA45006FE918 /* WeiBoContentViewController.swift */,
 				23BF7C891F32C6030067CE34 /* NewsViewController.swift */,
 				2315270F1F345C4300E7AB40 /* Model.swift */,
 				2376C05D1F4414A50016B73B /* UserDetailModel.swift */,
@@ -327,6 +330,7 @@
 				2376C05E1F4414A50016B73B /* UserDetailModel.swift in Sources */,
 				2363BED31F4146A600CA2F51 /* TtNavigationController.swift in Sources */,
 				2315270E1F34518000E7AB40 /* NetworkManager.swift in Sources */,
+				2343053B1F57AA45006FE918 /* WeiBoContentViewController.swift in Sources */,
 				2380DFBD1F3964E400EAF378 /* MyTableViewCell.swift in Sources */,
 				231527071F34492D00E7AB40 /* MainTableViewController.swift in Sources */,
 				23BF7C8A1F32C6030067CE34 /* NewsViewController.swift in Sources */,
