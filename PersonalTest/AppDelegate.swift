@@ -10,6 +10,12 @@ import UIKit
 import CoreData
 import Onboard.OnboardingViewController
 
+//        骚操作 窗口上永远加一个东西
+//        if view2.superview == nil{
+//            UIApplication.shared.keyWindow?.addSubview(view2)
+//        }
+//        UIApplication.shared.keyWindow?.bringSubview(toFront: view2)
+//        view2.isHidden = false
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

@@ -139,9 +139,12 @@ class NewMainController: UIViewController ,UITableViewDelegate ,UITableViewDataS
     }
 
     func pushViewController(id: Int64) {
-//        guard let weiBoContentViewController: WeiBoContentViewController = Bundle.main.loadNibNamed("WeiBoContentViewController", owner: nil, options: nil)?.last as? WeiBoContentViewController else {
-//            return
-//        }
-//        self.navigationController?.pushViewController(weiBoContentViewController, animated: true)
+        let sb = UIStoryboard(name: "WeiBoContentViewController", bundle: nil)
+        guard let weiBoContentController = sb.instantiateViewController(withIdentifier: "WeiBoContentController") as? WeiBoContentController else {
+            return
+        }
+        weiBoContentController.access_token = self.access_token
+        weiBoContentController.cellID = id
+        self.navigationController?.pushViewController(weiBoContentController, animated: true)
     }
 }
