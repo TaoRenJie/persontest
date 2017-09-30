@@ -17,6 +17,7 @@
 //    }
 
 import UIKit
+import SwiftyJSON
 
 protocol CommentViewDelegate:NSObjectProtocol {
     func reloadData()
@@ -34,6 +35,7 @@ class CommentView: UIView {
         super.awakeFromNib()
         commentTextField.becomeFirstResponder()
         NotificationCenter.default.addObserver(self, selector: #selector(CommentView.keyBoardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(CommentView.keyBoardWillHide(_:)), name:NSNotification.Name.UIKeyboardWillHide, object: nil)
         setupUI()
     }
 
@@ -51,7 +53,9 @@ class CommentView: UIView {
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        UIView.animate(withDuration: 0.5) {
+        commentTextField.resignFirstResponder()
+        let time: TimeInterval = 0.2
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + time) {
             self.removeFromSuperview()
         }
     }
@@ -74,6 +78,20 @@ class CommentView: UIView {
         let deltaY = keyBoardBounds.size.height
         let animations:(() -> Void) = {
             self.commentView.transform = CGAffineTransform(translationX: 0,y: -deltaY)
+        }
+        if duration > 0 {
+            let options = UIViewAnimationOptions(rawValue: UInt((userInfo[UIKeyboardAnimationCurveUserInfoKey] as! NSNumber).intValue << 16))
+            UIView.animate(withDuration: duration, delay: 0, options:options, animations: animations, completion: nil)
+        }else{
+            animations()
+        }
+    }
+
+    func keyBoardWillHide(_ note:Notification) {
+        let userInfo  = note.userInfo! as NSDictionary
+        let duration = (userInfo[UIKeyboardAnimationDurationUserInfoKey] as! NSNumber).doubleValue
+        let animations:(() -> Void) = {
+            self.commentView.transform = CGAffineTransform.identity
         }
         if duration > 0 {
             let options = UIViewAnimationOptions(rawValue: UInt((userInfo[UIKeyboardAnimationCurveUserInfoKey] as! NSNumber).intValue << 16))

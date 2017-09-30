@@ -9,7 +9,7 @@
 import UIKit
 import SwiftyJSON
 
-class WeiBoContentController: UIViewController ,UITableViewDelegate ,UITableViewDataSource ,CommentViewDelegate{
+class WeiBoContentController: UIViewController ,UITableViewDelegate ,UITableViewDataSource ,CommentViewDelegate ,SetCommentViewDelegate{
     @IBOutlet weak var tableView: UITableView!
 
     var cellID: Int64 = 0
@@ -110,10 +110,30 @@ class WeiBoContentController: UIViewController ,UITableViewDelegate ,UITableView
         return cell
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let view: SetCommentView = Bundle.main.loadNibNamed("SetCommentView", owner: nil, options: nil)?.last as! SetCommentView
+        let cellModel: CommentModel = myDataSource[indexPath.row]
+        view.weiBoName = cellModel.userName
+        view.weiBoText = cellModel.text
+        view.commentid = cellModel.id
+        view.access_token = self.access_token
+        view.delegate = self
+        let window = UIApplication.shared.windows[0]
+        window.addSubview(view)
+        UIView.animate(withDuration: 0.3) {
+            view.setTableView.frame = CGRect(x: 0,y: UIScreen.main.bounds.height/2, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height/2)
+        }
+    }
+
     func reloadData() {
         self.myDataSource.removeAll()
         self.loadData()
         self.tableView.reloadData()
+    }
+
+    func reloadSetData() {
+        self.myDataSource.removeAll()
+        self.loadData()
     }
 
     @IBAction func commentButtonAction(_ sender: UIButton) {
@@ -123,5 +143,6 @@ class WeiBoContentController: UIViewController ,UITableViewDelegate ,UITableView
         view.delegate = self
         let window = UIApplication.shared.windows[0]
         window.addSubview(view)
+
     }
 }

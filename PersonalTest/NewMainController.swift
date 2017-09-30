@@ -32,6 +32,7 @@ class NewMainController: UIViewController ,UITableViewDelegate ,UITableViewDataS
             }
             var purposeDictionary: [String: Any] = [:]
             var pictureArray: Array<String> = []
+            var bigPictureArray: Array<String> = []
             for what in jsonData2 {
                 guard let id = what["id"].int64 else {
                     return
@@ -53,15 +54,23 @@ class NewMainController: UIViewController ,UITableViewDelegate ,UITableViewDataS
                 }
                 if pictureJson.count != 0 {
                     for pictureStringJson in pictureJson {
-                        guard let pictureString = pictureStringJson["thumbnail_pic"].string else {
+                        guard var pictureString = pictureStringJson["thumbnail_pic"].string else {
                             return
                         }
                         pictureArray.append(pictureString)
+                        guard let range = pictureString.range(of: "thumbnail") else {
+                            return
+                        }
+                        pictureString.replaceSubrange(range, with: "bmiddle")
+                        bigPictureArray.append(pictureString)
                     }
                     purposeDictionary.updateValue(pictureArray, forKey: "pictureArray")
+                    purposeDictionary.updateValue(bigPictureArray, forKey: "bigPictureArray")
                     pictureArray.removeAll()
+                    bigPictureArray.removeAll()
                 } else {
                     purposeDictionary.updateValue(Array<String>(), forKey: "pictureArray")
+                    purposeDictionary.updateValue(Array<String>(), forKey: "bigPictureArray")
                 }
                 purposeDictionary.updateValue(id, forKey: "id")
                 purposeDictionary.updateValue(text, forKey: "text")

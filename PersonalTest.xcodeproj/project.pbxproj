@@ -18,12 +18,15 @@
 		2333E0F91F678CED00A87BFC /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2333E0F71F678CED00A87BFC /* CommentTableViewCell.swift */; };
 		2333E0FA1F678CED00A87BFC /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2333E0F81F678CED00A87BFC /* CommentTableViewCell.xib */; };
 		2341D1CB1F31D17000EC12B8 /* video1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2341D1CA1F31D17000EC12B8 /* video1.mp4 */; };
+		2347612E1F70B6E0008ADF80 /* SetCommentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2347612D1F70B6E0008ADF80 /* SetCommentView.xib */; };
+		234761301F70B6FE008ADF80 /* SetCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2347612F1F70B6FE008ADF80 /* SetCommentView.swift */; };
 		235A53A21F302BB10038DBF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235A53A11F302BB10038DBF0 /* AppDelegate.swift */; };
 		235A53A71F302BB10038DBF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 235A53A51F302BB10038DBF0 /* Main.storyboard */; };
 		235A53AA1F302BB10038DBF0 /* PersonalTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 235A53A81F302BB10038DBF0 /* PersonalTest.xcdatamodeld */; };
 		235A53AC1F302BB10038DBF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 235A53AB1F302BB10038DBF0 /* Assets.xcassets */; };
 		235A53AF1F302BB10038DBF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 235A53AD1F302BB10038DBF0 /* LaunchScreen.storyboard */; };
 		2363BED31F4146A600CA2F51 /* TtNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2363BED21F4146A500CA2F51 /* TtNavigationController.swift */; };
+		236A65C71F7C9DC800CA952D /* WeiBoImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236A65C61F7C9DC800CA952D /* WeiBoImageView.swift */; };
 		2376C05E1F4414A50016B73B /* UserDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2376C05D1F4414A50016B73B /* UserDetailModel.swift */; };
 		2380DFBD1F3964E400EAF378 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2380DFBB1F3964E400EAF378 /* MyTableViewCell.swift */; };
 		2380DFBE1F3964E400EAF378 /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2380DFBC1F3964E400EAF378 /* MyTableViewCell.xib */; };
@@ -72,6 +75,8 @@
 		2341D1C21F31670F00EC12B8 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = "../../Library/Developer/Xcode/DerivedData/PersonalTest-fyomgnroowhgujeohfospabpmpim/Build/Products/Debug-iphoneos/SnapKit/SnapKit.framework"; sourceTree = "<group>"; };
 		2341D1C81F31C0DE00EC12B8 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		2341D1CA1F31D17000EC12B8 /* video1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video1.mp4; sourceTree = "<group>"; };
+		2347612D1F70B6E0008ADF80 /* SetCommentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetCommentView.xib; sourceTree = "<group>"; };
+		2347612F1F70B6FE008ADF80 /* SetCommentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetCommentView.swift; sourceTree = "<group>"; };
 		235A539E1F302BB10038DBF0 /* PersonalTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonalTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		235A53A11F302BB10038DBF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		235A53A61F302BB10038DBF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -80,6 +85,7 @@
 		235A53AE1F302BB10038DBF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		235A53B01F302BB10038DBF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2363BED21F4146A500CA2F51 /* TtNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TtNavigationController.swift; sourceTree = "<group>"; };
+		236A65C61F7C9DC800CA952D /* WeiBoImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeiBoImageView.swift; sourceTree = "<group>"; };
 		2376C05D1F4414A50016B73B /* UserDetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailModel.swift; sourceTree = "<group>"; };
 		2380DFBB1F3964E400EAF378 /* MyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		2380DFBC1F3964E400EAF378 /* MyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
@@ -134,6 +140,8 @@
 				2333E0F81F678CED00A87BFC /* CommentTableViewCell.xib */,
 				233175DC1F68F9CF009C0EA7 /* CommentView.swift */,
 				233175DE1F68F9F1009C0EA7 /* CommentView.xib */,
+				2347612F1F70B6FE008ADF80 /* SetCommentView.swift */,
+				2347612D1F70B6E0008ADF80 /* SetCommentView.xib */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -172,6 +180,7 @@
 				2315270D1F34518000E7AB40 /* NetworkManager.swift */,
 				23D41C731F3AB6D400C54A40 /* WebViewController.swift */,
 				2363BED21F4146A500CA2F51 /* TtNavigationController.swift */,
+				236A65C61F7C9DC800CA952D /* WeiBoImageView.swift */,
 				235A53A51F302BB10038DBF0 /* Main.storyboard */,
 				235A53AB1F302BB10038DBF0 /* Assets.xcassets */,
 				2341D1CA1F31D17000EC12B8 /* video1.mp4 */,
@@ -301,6 +310,7 @@
 				23BF7C821F32C5490067CE34 /* column_edit_button@2x.png in Resources */,
 				2333E0FA1F678CED00A87BFC /* CommentTableViewCell.xib in Resources */,
 				2333E0F21F6778C300A87BFC /* WeiBoContentViewController.storyboard in Resources */,
+				2347612E1F70B6E0008ADF80 /* SetCommentView.xib in Resources */,
 				233175DF1F68F9F1009C0EA7 /* CommentView.xib in Resources */,
 				235A53A71F302BB10038DBF0 /* Main.storyboard in Resources */,
 			);
@@ -362,6 +372,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23BF7C7F1F32C5490067CE34 /* ZYColumnDownPromptView.swift in Sources */,
+				234761301F70B6FE008ADF80 /* SetCommentView.swift in Sources */,
 				23BF7C861F32C5490067CE34 /* ZYColumnSpreadView.swift in Sources */,
 				23BF7C881F32C5490067CE34 /* ZYColumnViewController.swift in Sources */,
 				2376C05E1F4414A50016B73B /* UserDetailModel.swift in Sources */,
@@ -375,6 +386,7 @@
 				23BF7C8A1F32C6030067CE34 /* NewsViewController.swift in Sources */,
 				2333E0F91F678CED00A87BFC /* CommentTableViewCell.swift in Sources */,
 				235A53A21F302BB10038DBF0 /* AppDelegate.swift in Sources */,
+				236A65C71F7C9DC800CA952D /* WeiBoImageView.swift in Sources */,
 				23D41C761F3AD9F600C54A40 /* UserModel.swift in Sources */,
 				2380DFC01F39AD9600EAF378 /* NewMainController.swift in Sources */,
 				231527101F345C4300E7AB40 /* Model.swift in Sources */,

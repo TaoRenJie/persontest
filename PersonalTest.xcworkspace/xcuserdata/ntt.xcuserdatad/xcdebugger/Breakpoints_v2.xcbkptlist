@@ -89,61 +89,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PersonalTest/CommentView.swift"
-            timestampString = "527157173.806901"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "postData()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PersonalTest.CommentView.(postData in _2F2C65C0BD168B3E720780C528FA0C5C) () -&gt; ()"
-                  moduleName = "PersonalTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ntt/Desktop/github/PersonalTest/CommentView.swift"
-                  timestampString = "527157445.029529"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "64"
-                  endingLineNumber = "64"
-                  offsetFromSymbolStart = "336">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PersonalTest.CommentView.((postData in _2F2C65C0BD168B3E720780C528FA0C5C) () -&gt; ()).(implicit closure #1)"
-                  moduleName = "PersonalTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ntt/Desktop/github/PersonalTest/CommentView.swift"
-                  timestampString = "527157445.031712"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "64"
-                  endingLineNumber = "64"
-                  offsetFromSymbolStart = "16">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "PersonalTest/WeiBoContentController.swift"
-            timestampString = "527158623.166621"
+            timestampString = "528099601.760681"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
-            landmarkName = "reloadData()"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
+            landmarkName = "reloadSetData()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
